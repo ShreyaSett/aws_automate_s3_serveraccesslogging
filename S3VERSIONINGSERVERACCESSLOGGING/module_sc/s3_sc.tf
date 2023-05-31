@@ -5,6 +5,13 @@ resource "aws_s3_bucket" "log-collection-bucket"{
     }
 }
 
+resource "aws_s3_bucket_versioning" "vers" {
+    bucket = aws_s3_bucket.log-collection-bucket.id
+    versioning_configuration {
+        status = "Enabled"
+    }
+}
+
 resource "aws_s3_bucket_server_side_encryption_configuration" "log-collection-sse" {
     bucket = aws_s3_bucket.log-collection-bucket.id
     rule {

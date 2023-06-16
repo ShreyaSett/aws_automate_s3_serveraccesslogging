@@ -34,7 +34,22 @@ resource "aws_s3_bucket_policy" "log-collection-bucket-policy" {
                     "Service": "logging.s3.amazonaws.com"
                 },
                 "Action": "s3:PutObject",
-                "Resource": "arn:aws:s3:::targetbucket/*"
+                "Resource": "arn:aws:s3:::${var.aws_tg}/*"
+            },
+            {
+                "Sid": "AllowSSLRequestsOnly",
+                "Effect": "Deny",
+                "Principal": "*",
+                "Action": "s3:*",
+                "Resource": [
+                    "arn:aws:s3:::${var.aws_tg}",
+                    "arn:aws:s3:::${var.aws_tg}/*"
+                ],
+                "Condition": {
+                    "Bool": {
+                        "aws:SecureTransport": "false"
+                    }
+                }
             }
         ]
     }

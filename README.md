@@ -10,4 +10,7 @@ The requirement here is simply, the data logs for multiple Buckets in a particul
 This is a walkthrough for anybody looking to automate S3 Versioning and Server Access Log Delivery for all the S3 Buckets in a particular region in their account to a target Bucket in the same region using AWS Lambda.
 
 I have used Terraform to spin up and implement this, where Terraform takes care of creating your target Bucket with necessary permissions, the EventBridge rule, Lambda Function with the execution role having the discussed permissions, the EventBridge trigger mapping to the Lambda Function.
+
+
+
 <img width="621" height="420" alt="image" src="https://github.com/user-attachments/assets/201ed6a8-ab5b-49fc-aa3d-bae4dd414463" />

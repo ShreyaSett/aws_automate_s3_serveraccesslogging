@@ -1,4 +1,4 @@
-Automate the implementation of Versioning and Server Access Logging for all your S3 Buckets using AWS Lambda and Terraform
+## Automate the implementation of Versioning and Server Access Logging for all your S3 Buckets using AWS Lambda and Terraform
 
 
 Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same Bucket. With S3 Versioning feature you can preserve, retrieve, and restore every version of every object stored in the Buckets.

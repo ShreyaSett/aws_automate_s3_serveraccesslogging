@@ -13,4 +13,4 @@ I have used Terraform to spin up and implement this, where Terraform takes care 
 
 <img width="621" height="420" alt="image" src="https://github.com/user-attachments/assets/201ed6a8-ab5b-49fc-aa3d-bae4dd414463" />
 
-Here I am using terraform for end to end provisioning and implementation
+Here I am using terraform for end to end provisioning and implementation.
